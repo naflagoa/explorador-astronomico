@@ -1,0 +1,11 @@
+name: Alertas do GitHub
+on: [push, pull_request]  
+
+jobs:
+  enviar-alerta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar alerta
+        run: |
+          echo "⚠️ ALERTA: Alguém mexeu no repositório!"
+          echo "👤 Quem fez: ${{ github.actor }}"
